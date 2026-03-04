@@ -1,0 +1,220 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--background);
+}
+
+.login-left {
+    flex: 1;
+    background-color: var(--secondary-900);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .login-left {
+        display: none;
+    }
+}
+
+.login-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.login-left-content {
+    position: relative;
+    z-index: 2;
+}
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.login-quote {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.login-quote span {
+    color: var(--primary-500);
+}
+
+.login-description {
+    color: var(--secondary-300);
+    font-size: 1.125rem;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.login-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.login-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-400);
+}
+
+.login-feature-text h4 {
+    color: white;
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+}
+
+.login-feature-text p {
+    color: var(--secondary-400);
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--surface);
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.login-mobile-brand {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-600);
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .login-mobile-brand {
+        display: flex;
+    }
+}
+
+.login-header h2 {
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-900);
+}
+
+.login-header p {
+    color: var(--secondary-500);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.demo-credentials {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.demo-credentials h3 {
+    font-size: 0.875rem;
+    color: var(--secondary-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.demo-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.demo-btn {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    color: var(--secondary-700);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.demo-btn:hover {
+    border-color: var(--primary-400);
+    background-color: var(--primary-50);
+    color: var(--primary-700);
+}
+
+.demo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.demo-dot.admin {
+    background-color: var(--danger-500);
+}
+
+.demo-dot.manager {
+    background-color: var(--primary-500);
+}
+
+.demo-dot.supervisor {
+    background-color: var(--success-500);
+}
